@@ -26,11 +26,9 @@ const CalMain = () => {
       },
     },
     {
-      value: "%",
+      value: " % ",
       btnFunction: () => {
-        const newnum = parseInt(input);
-        setnewInput(((newnum * operation) / 100).toString());
-        // setnewInput((prevValue) => parseInt(prevValue.toString() + "%"));
+        setnewInput((input / operation) * 100);
       },
     },
     {
@@ -107,7 +105,7 @@ const CalMain = () => {
     {
       value: ".",
       btnFunction: () => {
-        if (!input.includes(".")|| !curretOpration) {
+        if (!input.includes(".")) {
           setnewInput((input + "."));
         } else {
         
@@ -171,15 +169,10 @@ const CalMain = () => {
             break;
           case "/":
             setnewInput((prevValue) => {
-              return prevValue / operation;
+              return  operation / prevValue;
             });
             break;
-          case "x2":
-            setnewInput((prevValue) => {
-              return Math.sqrt(prevValue);
-            });
-
-            break;
+         
 
           default:
             break;
