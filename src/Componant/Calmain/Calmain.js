@@ -105,7 +105,7 @@ const CalMain = () => {
     {
       value: ".",
       btnFunction: () => {
-        if (!input.includes(".")) {
+        if (!curretOpration.includes(".")) {
           setnewInput((input + "."));
         } else {
         
